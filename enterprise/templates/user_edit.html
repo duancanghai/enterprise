@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div id="userinfo_edit">
+        <form>
+            <div class="form-group col-md-4">
+                <label for="name">昵称</label>
+                <input type="text" class="form-control" name="name" id="name"/>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="phone">电话</label>
+                <input type="text" class="form-control" name="phone" id="phone"/>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="email">邮箱</label>
+                <input type="email" class="form-control" name="email" id="email"/>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="firstname">姓氏</label>
+                <input type="text" class="form-control" name="firstname" id="firstname"/>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="lastname">名称</label>
+                <input type="text" class="form-control" name="lastname" id="lastname"/>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="title">称谓</label>
+                <!--<input type="text" class="form-control" name="title" id="title"/>-->
+                <select id="title" class="form-control">
+                    <option value="1">先生</option>
+                    <option value="1">女士</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="birthday">出生日期 </label>
+                <input type="date" class="form-control" name="birthday" id="birthday"/>
+            </div>
+            <div class="clearfix"></div>
+            <div class="form-group" style="padding-left:15px;">
+                <a class="btn btn-primary a-submit">
+                    <span>保  存</span>
+                </a>
+            </div>
+        </form>
+        <form>
+            <h3>更改你的密码</h3>
+
+            <div class="form-group col-md-4">
+                <label for="old_pwd">输入旧的密码</label>
+                <input type="password" name="old_pwd" id="old_pwd" class="form-control"/>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="new_pwd">输入新密码</label>
+                <input type="password" name="new_pwd" id="new_pwd" class="form-control"/>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="confirm_pwd">输入旧的密码</label>
+                <input type="password" name="confirm_pwd" id="confirm_pwd" class="form-control"/>
+            </div>
+            <div class="form-group" style="padding-left:15px;">
+                <a class="btn btn-danger a-submit">
+                    <span>更  改</span>
+                </a>
+            </div>
+        </form>
+    </div>
+    <div id="package_list">
+        <h3>我的套餐预订</h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>订单编号</th>
+                <th>产品名称</th>
+                <th>出行人数</th>
+                <th>出行日期</th>
+                <th>当前状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>SO0001</td>
+                <td>罗马七日游</td>
+                <td>20人</td>
+                <td>2014-11-29</td>
+                <td>等待确认</td>
+                <td><a class="btn btn-primary" href="#">修改</a> <a class="btn btn-danger" href="#">撤销</a></td>
+            </tr>
+            <tr>
+                <td>SO0001</td>
+                <td>罗马七日游</td>
+                <td>20人</td>
+                <td>2014-11-29</td>
+                <td>等待确认</td>
+                <td><a class="btn btn-primary" href="#">修改</a> <a class="btn btn-danger" href="#">撤销</a></td>
+            </tr>
+            <tr>
+                <td>SO0001</td>
+                <td>罗马七日游</td>
+                <td>20人</td>
+                <td>2014-11-29</td>
+                <td>等待确认</td>
+                <td><a class="btn btn-primary" href="#">修改</a> <a class="btn btn-danger" href="#">撤销</a></td>
+            </tr>
+            <tr>
+                <td>SO0001</td>
+                <td>罗马七日游</td>
+                <td>20人</td>
+                <td>2014-11-29</td>
+                <td>等待确认</td>
+                <td><a class="btn btn-primary" href="#">修改</a> <a class="btn btn-danger" href="#">撤销</a></td>
+            </tr>
+            <tr>
+                <td>SO0001</td>
+                <td>罗马七日游</td>
+                <td>20人</td>
+                <td>2014-11-29</td>
+                <td>等待确认</td>
+                <td><a class="btn btn-primary" href="#">修改</a> <a class="btn btn-danger" href="#">撤销</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="package_edit">
+        <h3>行程及旅客确认</h3>
+
+        <form>
+            <fieldset>
+                <legend>套餐日期及确认</legend>
+                <div class="form-group col-md-6">
+                    <label for="packagename">套餐名称</label>
+                    <input id="packagename" name="packagename" type="text" class="form-control" value="罗马七日游"></input>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="startdate">出行日期</label>
+                    <input id="startdate" name="startdate" type="date" class="form-control" value="2015-01-10"/>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>联系人信息确认</legend>
+                <div class="form-group col-md-6">
+                    <label for="contactname">姓名</label>
+                    <input id="contactname" name="contactname" type="text" class="form-control" value="陈昌晨"></input>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="mobile">手机号码</label>
+                    <input id="mobile" name="mobile" type="text" class="form-control" value="180198319088"/>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>
+                    <span>旅客信息确认</span> <span><a href="#" class="btn btn-primary btn-sm">添加新客户</a></span>
+                </legend>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>中文名称</th>
+                        <th>英文名称(姓)</th>
+                        <th>英文名称(名)</th>
+                        <th>手机号码</th>
+                        <th>所在国籍</th>
+                        <th>护照号码</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>潘春艳</td>
+                        <td>Pan</td>
+                        <td>Chunyan</td>
+                        <td>18019879882</td>
+                        <td>China</td>
+                        <td>2892838388</td>
+                        <td><a class="btn btn-primary btn-xs" href="#">编辑</a> <a class="btn btn-danger btn-xs" href="#">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>潘春艳</td>
+                        <td>Pan</td>
+                        <td>Chunyan</td>
+                        <td>18019879882</td>
+                        <td>China</td>
+                        <td>2892838388</td>
+                        <td><a class="btn btn-primary btn-xs" href="#">编辑</a> <a class="btn btn-danger btn-xs" href="#">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>潘春艳</td>
+                        <td>Pan</td>
+                        <td>Chunyan</td>
+                        <td>18019879882</td>
+                        <td>China</td>
+                        <td>2892838388</td>
+                        <td><a class="btn btn-primary btn-xs" href="#">编辑</a> <a class="btn btn-danger btn-xs" href="#">删除</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+
+        <div class="customer">
+            <form>
+                <div class="form-group col-md-4">
+                    <label for="cnname">中文名称</label>
+                    <input type="text" class="form-control" id="cnname" name="cnname"/>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="mobile">手机号码</label>
+                    <input type="text" class="form-control" id="mobile" name="mobile"/>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="country">所在国籍</label>
+                    <input type="text" class="form-control" id="country" name="country"/>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="firstname">英文名称(姓)</label>
+                    <input type="text" class="form-control" id="firtname" name="firtname"/>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="lastname">英文名称(名)</label>
+                    <input type="text" class="form-control" id="lastname" name="lastname"/>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="sex">性别</label>
+                    <input type="text" class="form-control" id="sex" name="sex"/>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="birthday">出生日期</label>
+                    <input type="date" class="form-control" id="birthday" name="birthday"/>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="cardno">护照号码</label>
+                    <input type="text" class="form-control" id="cardno" name="cardno"/>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

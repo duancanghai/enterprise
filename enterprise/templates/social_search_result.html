@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="row text-center" style="background-color:black;color:white;margin-bottom:20px;">
+        <h4>查询社保政策</h4>
+    </div>
+    <div class="row">
+        <p>查询条件:
+            <strong>
+                {%if items%}
+                    <!--中国人、上海、本地城镇、当前(2014)-->
+                    {{items[0]['state_id'][1]}} {{items[0]['location_id'][1]}} {{items[0]['name']}}
+                {%end%}
+            </strong>
+        </p>
+    </div>
+
+    {% for item in items %}
+    <div class="row">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th width="30%">{{item['item_type_id'][1]}}</th>
+                    <th width="30%">个人</th>
+                    <th width="30%">公司</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>基数</td>
+                    <td colspan="2">{{item['loc_base_min']}} - {{item['loc_base_max']}}</td>
+                </tr>
+                <tr>
+                    <td>员工缴纳</td>
+                    <td>{{item['emp_percent']}}%</td>
+                    <td>{{item['org_percent']}}%</td>
+                </tr>
+                <tr>
+                    <td>尾数处理</td>
+                    <td>{{item['calc_end_type']}}</td>
+                    <td>{{item['calc_keep_count']}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% end %}
+    <!--
+    <div class="row">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>医疗保险</th>
+                    <th>个人</th>
+                    <th>公司</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>基数</td>
+                    <td>3022</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>员工缴纳</td>
+                    <td>2%</td>
+                    <td>11%</td>
+                </tr>
+                <tr>
+                    <td>尾数处理</td>
+                    <td>保留两位</td>
+                    <td>保留两位</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="table-responsive">
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>工伤保险</th>
+                    <th>个人</th>
+                    <th>公司</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>基数</td>
+                    <td>3022</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>员工缴纳</td>
+                    <td>0%</td>
+                    <td>5%</td>
+                </tr>
+                <tr>
+                    <td>尾数处理</td>
+                    <td>保留两位</td>
+                    <td>见分进角</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    -->
+</div>
+</body>
+</html>

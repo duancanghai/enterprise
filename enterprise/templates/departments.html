@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="table-responsive">
+             <table class="table">
+                 <caption>
+                     Departments
+                 </caption>
+                 <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                    </tr>
+                 </thead>
+                 <tbody>
+                    {% for item in items %}
+                        <tr>
+                            <td>{{ item["id"] }}</td>
+                            <td>{{ item["name"] }}</td>
+                        </tr>
+                   {% end %}
+                 </tbody>
+             </table>
+            </div>
+        </div>
+    </body>
+</html>

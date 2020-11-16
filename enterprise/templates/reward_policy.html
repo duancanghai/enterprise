@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    {%for item in policy_items%}
+    <a href="/policy/policy?id={{item['id']}}">
+        <p>
+            {% if item['content_type'] == 'text' %}
+            {{ item["content_text"] }}
+            {% end %}
+            {% if item['content_type'] != 'text' %}
+
+            <img  src="data:image/png;base64,{{item['content_binary']}}"/>
+            {% end %}
+        </p>
+    </a>
+    {% end %}
+</div>
+</body>
+</html>

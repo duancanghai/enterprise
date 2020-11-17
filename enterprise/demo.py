@@ -3,11 +3,11 @@ from WXBizMsgCrypt import  WXBizMsgCrypt
 
 sCorpID = "wx1bb2c78b19140a77"
 import xmlrpclib
-HOST = "http://114.215.192.144"
-PORT = 8069
+HOST = "http://114.215.192.141"
+PORT = 8000
 DB = "policy"
 USER = "admin"
-PASS = "admin"
+PASS = "admin123"
 
 def getPolicies():
     url = '%s:%d' % (HOST,PORT)
